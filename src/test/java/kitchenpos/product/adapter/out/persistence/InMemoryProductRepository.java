@@ -1,4 +1,4 @@
-package kitchenpos.product.domain;
+package kitchenpos.product.adapter.out.persistence;
 
 import kitchenpos.product.adapter.out.persistence.ProductEntity;
 import kitchenpos.product.adapter.out.persistence.ProductRepository;
@@ -6,7 +6,7 @@ import kitchenpos.product.adapter.out.persistence.ProductRepository;
 import java.util.*;
 import java.util.stream.Collectors;
 
-public class InMemoryProductRepository implements ProductRepository {
+class InMemoryProductRepository implements ProductRepository {
     private final Map<UUID, ProductEntity> products = new HashMap<>();
 
     @Override
