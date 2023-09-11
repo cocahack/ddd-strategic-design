@@ -1,8 +1,9 @@
-package kitchenpos.menu.tobe.adapter.out.persistence;
+package kitchenpos.menu.adapter.out.persistence;
 
+import kitchenpos.menu.application.port.out.UpdateMenuPort;
 import kitchenpos.menu.domain.Menu;
 import kitchenpos.menu.domain.MenuRepository;
-import kitchenpos.menu.tobe.application.port.out.LoadMenuPort;
+import kitchenpos.menu.application.port.out.LoadMenuPort;
 import org.springframework.stereotype.Component;
 
 import java.util.List;
@@ -10,7 +11,7 @@ import java.util.Optional;
 import java.util.UUID;
 
 @Component
-class MenuPersistenceAdapter implements LoadMenuPort {
+class MenuPersistenceAdapter implements LoadMenuPort, UpdateMenuPort {
 
     private final MenuRepository menuRepository;
 
@@ -26,5 +27,10 @@ class MenuPersistenceAdapter implements LoadMenuPort {
     @Override
     public Optional<Menu> findById(UUID id) {
         return menuRepository.findById(id);
+    }
+
+    @Override
+    public Menu save(Menu menu) {
+        return null;
     }
 }

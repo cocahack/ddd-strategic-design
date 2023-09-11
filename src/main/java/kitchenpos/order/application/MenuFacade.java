@@ -1,7 +1,7 @@
 package kitchenpos.order.application;
 
 import kitchenpos.menu.domain.Menu;
-import kitchenpos.menu.tobe.application.port.out.LoadMenuPort;
+import kitchenpos.menu.application.port.out.LoadMenuPort;
 import org.springframework.stereotype.Component;
 
 import java.util.List;

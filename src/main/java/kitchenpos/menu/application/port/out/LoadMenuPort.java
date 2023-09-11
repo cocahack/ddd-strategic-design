@@ -1,4 +1,4 @@
-package kitchenpos.menu.tobe.application.port.out;
+package kitchenpos.menu.application.port.out;
 
 import kitchenpos.menu.domain.Menu;
 

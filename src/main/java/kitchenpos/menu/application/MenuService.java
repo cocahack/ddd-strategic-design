@@ -1,5 +1,6 @@
 package kitchenpos.menu.application;
 
+import kitchenpos.menu.application.port.in.MenuUseCase;
 import kitchenpos.menu.domain.MenuProduct;
 import kitchenpos.profanity.application.port.out.ProfanityFilterPort;
 import kitchenpos.menu.domain.Menu;
@@ -16,7 +17,7 @@ import java.util.*;
 import java.util.stream.Collectors;
 
 @Service
-public class MenuService {
+public class MenuService implements MenuUseCase {
     private final MenuRepository menuRepository;
     private final MenuGroupRepository menuGroupRepository;
     private final ProductRepository productRepository;
